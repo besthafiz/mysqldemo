@@ -11,6 +11,9 @@ alter table address_master rename column modify_date to modified_date;
 -- insert current date into address_master for created_date and modified_date for MYSQL
 update address_master set created_date = SYSDATE(), modified_date = SYSDATE();
 
+-- insert address_master table data
+insert into address_master (address_id, address_line1, address_line2, city, state, country,zip_code,created_by,created_date,modified_by,modified_date) values (1, 'dubai', 'dubai', 1, 1, 1,868,'test',SYSDATE(),'testuser',SYSDATE());
+
 
 -- insert data into address_master  table
 insert into address_master (address_id, MEMBER_ID,address_line1, address_line2, city, state, country,zip_code,created_by,created_date,modified_by,modified_date) values (1, 1,'dubai', 'dubai', 1, 1, 1,868,'test',SYSDATE(),'testuser',SYSDATE());
